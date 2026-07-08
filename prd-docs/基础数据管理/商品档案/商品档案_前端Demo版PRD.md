@@ -152,7 +152,7 @@
 
 Demo 数据字段以《商品档案字段清单》为准。以下为页面验证用样例，日期统一使用 2026 年；分类、税率、体积、重量为 Demo 展示口径，正式口径以 ERP 接口和产品复核为准。
 
-| code | name | spec | unit | barcode | category | taxRate | safetyStock | minimumStock | defaultLocationCode | batchManaged | status | updatedAt |
+| code | name | productSpec | unit | barcode | category | taxRate | safetyStock | minimumStock | defaultLocationCode | batchManaged | status | updatedAt |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | ---: | ---: | :--- | :---: | :--- | :--- |
 | `SKU001` | 双鸭牌标准型回形针 | 100枚/盒 | 盒 | `6901234567890` | 办公耗材 | 13.00% | 50 | 20 | `LOC-A01` | 否 | `ENABLED` | `2026-07-01 10:00:00` |
 | `SKU002` | 晨光按动式中性笔黑色 | 0.5mm | 支 | `6902345678901` | 办公耗材 | 13.00% | 30 | 10 | `LOC-P01` | 否 | `ENABLED` | `2026-07-01 10:05:00` |

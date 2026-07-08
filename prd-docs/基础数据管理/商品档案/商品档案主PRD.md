@@ -127,7 +127,7 @@ sequenceDiagram
     participant Doc as 业务单据
     participant Warn as 库存预警
 
-    ERP->>WMS: 同步商品基础信息(code/name/spec/unit/barcode/category/taxRate)
+    ERP->>WMS: 同步商品基础信息(code/name/productSpec/unit/barcode/category/taxRate)
     WMS->>WMS: 按 code 新增或更新只读字段
     User->>WMS: 维护 WMS 仓储属性
     WMS-->>User: 保存 safetyStock/minimumStock/defaultLocation 等

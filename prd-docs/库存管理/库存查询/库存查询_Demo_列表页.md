@@ -52,7 +52,7 @@
 | 货位 | locationCode | 是 | 是 | PDA 主信息 |
 | SKU | productCode | 是 | 是 | 商品编码 |
 | 商品 | productName | 是 | 是 | 商品名称 |
-| 规格 | spec | 是 | 否 | 无值展示 `-` |
+| 规格 | productSpec | 是 | 否 | 无值展示 `-` |
 | 单位 | unit | 是 | 是 | - |
 | 批次 | batchNo | 是 | 是 | 无批次展示 `-` |
 | 现存 | qtyOnHand | 是 | 是 | 数量右对齐 |
