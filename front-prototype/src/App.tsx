@@ -1,6 +1,7 @@
 import React from 'react';
 import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
+import ManualPage from './pages/ManualPage';
 
 // 模块 1：入库
 import InboundList from './pages/InboundList';
@@ -46,7 +47,7 @@ import PdaCheck from './pages/PdaCheck';
 import { 
   Layers, Home, ShoppingCart, Truck, Package, 
   Menu, User, Bell, ClipboardList, Building2, Map, MapPin,
-  ClipboardCheck, ArrowRightLeft, ClipboardX
+  ClipboardCheck, ArrowRightLeft, ClipboardX, BookOpen
 } from 'lucide-react';
 
 // B 端后台主布局组件
@@ -255,6 +256,26 @@ function Layout({ children }: { children: React.ReactNode }) {
               </li>
             </ul>
           </div>
+
+          {/* 组6：操作支持 */}
+          <div>
+            <span className="px-3 text-[10px] font-bold text-slate-500 uppercase tracking-wider block mb-2 font-mono">操作支持</span>
+            <ul className="space-y-1 text-xs font-semibold">
+              <li>
+                <Link
+                  to="/manual"
+                  className={`flex items-center gap-3 px-3 py-2.5 rounded-md transition-colors cursor-pointer ${
+                    isMenuChecked('/manual')
+                      ? 'bg-primary text-white font-bold'
+                      : 'hover:bg-slate-855 hover:text-white text-slate-400'
+                  }`}
+                >
+                  <BookOpen size={15} />
+                  <span>操作手册</span>
+                </Link>
+              </li>
+            </ul>
+          </div>
         </nav>
 
         {/* 底部用户信息 */}
@@ -334,6 +355,7 @@ function AppContent() {
       <Routes>
         {/* 控制台首页 */}
         <Route path="/" element={<Dashboard />} />
+        <Route path="/manual" element={<ManualPage />} />
         
         {/* 模块1：入库 */}
         <Route path="/inbound" element={<InboundList />} />
